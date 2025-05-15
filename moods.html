@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rabiya's Moods</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #fff0f5;
+      background: linear-gradient(to bottom right, #f5d5e0, #fceabb);
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    .carousel-item img {
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .emotion-label {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .emotion-text {
+      font-size: 1.1rem;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    /* Sparkles on hover */
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ff69b4 0%, #fff 60%, transparent 100%);
+      pointer-events: none;
+      z-index: 9999;
+      animation: sparkle-fade 0.8s linear forwards;
+    }
+
+    /* button style */
+
+    .next-btn {
+      padding: 12px 25px;
+      background-color: #d90429;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .next-btn:hover {
+      background-color: #ef233c;
+    }
+
+
+    @keyframes sparkle-fade {
+      to {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Rabiya's Iconic Moods 😍😤🔥😴</h2>
+    <div id="moodCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+
+        <!-- Cute -->
+<div class="carousel-item active">
+  <img src="images/cute RA.png" class="d-block mx-auto" alt="Cute Rabiya">
+  <div class="emotion-label">Cute 🧸</div>
+  <p class="emotion-text">Your cuteness is a national treasure(Jhoot hai yeh okk). Aur sabse jyada cute toh tu sabse jyada gusse me hai tab lagti hai. Maan krta hai ki gaal keech du. Ab iska mtlb yeh nhi ki jabarjasti gusse me rahegi , kabhi kabar hi cute lagti hai har baar nhi okkk!!🙄 </p>
+</div>
+
+<!-- Angry -->
+<div class="carousel-item">
+  <img src="images/Rowdy RA.png" class="d-block mx-auto" alt="rowdy Rabiya">
+  <div class="emotion-label">Rowdy 😎</div>
+  <p class="emotion-text">The rowdy of our group. She keeps saying maardungi , peet dungi, pitjayega etc etc but in reality can't do anything sed lyf. But jokes apart she is very brave & can handle any situation smartly & efficiently. Learning everything from me😌</p>
+</div>
+
+<!-- Hot -->
+<div class="carousel-item">
+  <img src="images/hot RA.png" class="d-block mx-auto" alt="Hot Rabiya">
+  <div class="emotion-label">Hot 🔥</div>
+  <p class="emotion-text">To be honest hot toh bohut hai,Hot toh bohut ladkiyan hoti hai lekin teri baat alag hai sabse. Le yeh padh : "Uski adaon mein aag si hai, nazar jaaye toh dil behak jaaye,
+Jab woh muskaraaye, lagta hai jaise saawan bhi jal jaaye!!".Meri hotness transfer toh hui hai tere me 😌</p>
+</div>
+
+<!-- Lazy -->
+<div class="carousel-item">
+  <img src="images/Lazy RA.png" class="d-block mx-auto" alt="Lazy Rabiya">
+  <div class="emotion-label">Lazy 😴</div>
+  <p class="emotion-text">Aalsi bole toh ek number ki aalsi kumbkaran sharma jaye. Baaki toh tu janti hai bd hai isliye jyada nhi bolunga chup hu.</p>
+</div>
+
+<!-- Naughty -->
+<div class="carousel-item">
+  <img src="images/Naughty RA.png" class="d-block mx-auto" alt="Naughty Rabiya">
+  <div class="emotion-label">Naughty 😈</div>
+  <p class="emotion-text">Dhikti ek dum bholi hai lekin hai ek number ki chant aur shararati. Itna pareshaan karti hai aur thoda sa usko kardo toh muh fool jayega balloon jaisa. 3rd no. wali photo achi hai na?🙂</p>
+</div>
+
+<!-- Her smile -->
+<div class="carousel-item">
+  <img src="images/Smile RA.png" class="d-block mx-auto" alt="Smily Rabiya">
+  <div class="emotion-label">Her Smile 😊</div>
+  <p class="emotion-text">The only thing I loved the most after coming to Parul is Ice gola, Aam ras and her smile (koi sequence nhi hai isme okk👀).Whenever I see her smiling face it makes me also smile.Kyuki joker lagti hai 🤣</p>
+</div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#moodCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#moodCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="text-center">
+  <button class="next-btn" onclick="goToNextPage()"> Next one is last and very special click on your own risk ➡️</button>
+</div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sparkles on hover
+    document.addEventListener("mousemove", (e) => {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    });
+    function goToNextPage() {
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "main.html"; // move to quiz page next
+      }, 800);
+    }
+  </script>
+</body>
+</html>

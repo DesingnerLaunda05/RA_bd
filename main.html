@@ -1,0 +1,180 @@
+<!-- celebration.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Real Celebration 🎬</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #f5d5e0, #fceabb);
+      color: #222;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    iframe, video {
+      width: 100%;
+      height: 450px;
+    }
+
+    .message {
+      margin-top: 40px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .sparkle {
+      animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { color: #e91e63; }
+      50% { color: #ff9800; }
+    }
+    /* Flying hearts animation */
+.heart {
+  position: fixed;
+  top: 100%;
+  font-size: 1.5rem;
+  color: #ff69b4;
+  animation: floatHearts 10s linear infinite;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Sparkling cursor trail */
+.sparkle-cursor {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff 0%, #ffc0cb 60%, transparent 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: sparkleFade 0.8s linear forwards;
+}
+
+@keyframes sparkleFade {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <h1 class="fade-in sparkle">🎥 The Real Celebration 🎂</h1>
+
+  <p class="intro fade-in">
+    While you were laughing, clicking, and having fun...
+    <br>
+    Something beautiful was happening in the real world.
+    <br><br>
+    Here's a little something to make your birthday even more meaningful ❤️
+  </p>
+
+  <div class="video-container fade-in">
+    <!-- Replace this with your hosted video embed -->
+    <!-- For YouTube -->
+    <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+
+    <!-- For local or direct video file -->
+    <video controls>
+      <source src="videos/rabiya_celebration.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <p class="message fade-in">
+    This is for you, Rabiya 💖
+    <br>
+    Happy Birthday to the kindest, funniest, and most genuine soul I know 🎉🥹
+    <br>
+    Hope this suprise brought a smile on your face :) Have a great day!!
+  </p>
+
+  <script>
+    // Flying hearts background
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }, 500);
+
+    // Sparkling cursor trail
+    document.addEventListener("mousemove", (e) => {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle-cursor");
+      sparkle.style.left = e.pageX + "px";
+      sparkle.style.top = e.pageY + "px";
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>

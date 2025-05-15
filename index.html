@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Beginning of Our Chaos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    .fade-out {
+      animation: fadeOut 0.8s forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #f5d5e0, #fceabb);
+      color: #222;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #e63946;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .enter-btn {
+      padding: 12px 25px;
+      background-color: #d90429;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      background-color: #ef233c;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .enter-btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Beginning of Our Chaos</h1>
+    <p>Warning: This site contains extreme cuteness, sweet surprises, and unnecessary levels of sarcasm from Rabiya.</p>
+    <button class="enter-btn" onclick="goToNext()">Enter If You’re Awesome 😎</button>
+  </div>
+
+  <script>
+    function goToNext() {
+       // You can link this to the next section or page when we build it
+       alert("Brace yourself, Rabiya 😘 — things are about to get chaotic!");
+       window.location.href = "how-we-met.html";
+     }
+  </script>
+</body>
+
+</html>

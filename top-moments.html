@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Moments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #f5d5e0, #fceabb);
+      color: #222;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-out {
+      animation: fadeOut 0.8s forwards;
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 80px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #e63946;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .moment {
+      margin-bottom: 30px;
+    }
+
+    .moment h3 {
+      font-size: 1.8em;
+      color: #9d0208;
+    }
+
+    .moment p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .emoji {
+      font-size: 2em;
+    }
+
+    .next-btn {
+      padding: 12px 25px;
+      background-color: #d90429;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .next-btn:hover {
+      background-color: #ef233c;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      .moment h3 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📌 My Top Moments with Rabiya</h1>
+    <p>By the way every moment with Rabiya is special.But some moments are more special</p>
+
+    <!-- Moment 1 -->
+    <div class="moment">
+      <h3>1. The Time when you talked to me for more than one minute😅</h3>
+      <p>It was the time when you asked me my number for getting help in the process of installing hadoop😅. After this incident I was very happy and was waiting for your phone but you didn't called me that day, Gandi ladki</p>
+    </div>
+
+    <!-- Moment 2 -->
+    <div class="moment">
+      <h3>2. Hadoop Instalation ☕🙈</h3>
+      <p>The time when we had a complete conversation with each other. It was like a stage one of knowing Rabiya. At first she use used to talk by saying "Aap" this much respect, but didn't knew ki yeh sirf kuch dino ki baat hai, Chudail abhi jagi nhi thi😬</p>
+    </div>
+
+    <!-- Moment 3 -->
+    <div class="moment">
+      <h3>3. My Birthday 😆</h3>
+      <p>It was my birthday and Nidhin,Anamika and Sumit planned to cut the cake. When I met Nidhin, He asked me if you want to call someone else then you can call now & the name came to my mind was yours , but I was doubtfull whether you will come or not because it was just the begining of our friendship , after thinking alot I called you and boom you said yess
+        , Now I was happy but my happiness increased when you gifted me that braclet, as I don't expects gifts from anyone and no one has gifted me also accept my mother and my close relatives, and a gift from your side was not even I thought of as it was just 3-4 days we started talking. So this is one of the moment which is very special for me😶</p>
+    </div>
+
+    <!-- Moment 4 -->
+    <div class="moment">
+      <h3>4. Ramadan Eidi 🎁</h3>
+      <p>It just came in my mind from nowhere that I should gift something to you in this Eid.And the night before when I was preparing the gift the only thing in my mind was the smiling face of you after seeing the gift that was the only thing I was expecting in return of this gift that's why I told you to make a video of opening the gift, the only regret is
+        that the butterflies dign't go as planned , but still your reaction was amazing , I felt like the hard work I did was not waste and that moment was so awsome , I still use to see that video because it's amazing😁</p>
+    </div>
+
+    <!-- Moment 5 -->
+    <div class="moment">
+      <h3>5. Meeting your mother👀</h3>
+      <p>Meeting friends parents is normal for me, but for meeting your mother I was really excited and was scared also like what will I talk and and what if I said something wrong what aunty will think about me etc but as I spoked to aunty all my anxiety gone down , aunty is very chill and very caring, I loved the way she blessed me and the way she talks, and
+        the way she asked about my mother and the gift everything was lovely and perfect.Amazing moment to be honest👌 </p>
+    </div>
+
+    <!-- Moment 6 -->
+    <div class="moment">
+      <h3>6. Time Together💭</h3>
+      <p>The day revently when we spent more than 2-3hrs together alone for the first time.From library to PPT and from there to krishna & from krishna to parking it was so special , the talks we did every second of that day was special for me🤗</p>
+    </div>
+
+    <button class="next-btn" onclick="goToNextPage()">Ready to see my version of Rabiya?👀 ➡️</button>
+  </div>
+
+  <script>
+    function goToNextPage() {
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "moods.html"; // move to quiz page next
+      }, 800);
+    }
+  </script>
+</body>
+</html>
